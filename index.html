@@ -73,26 +73,33 @@
             </div>
         </div>
     </nav>
-    <header class="relative min-h-[90vh] flex flex-col justify-center overflow-hidden" id="inicio">
+    <header class="relative flex flex-col justify-center overflow-hidden min-h-screen" id="inicio">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="hero.webp" alt="Background" class="w-full h-full object-cover">
+            <picture class="w-full h-full">
+                <source media="(max-width: 767px)" srcset="hero-mobile.webp">
+                <source media="(min-width: 768px)" srcset="hero.webp">
+                <img src="hero.webp" alt="Background" class="w-full h-full object-cover object-top">
+            </picture>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 w-full" style="margin-top: 25px;">
-            <div class="max-w-3xl flex flex-col items-start gap-2">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-medium text-stone-900 leading-[1.1] tracking-tight mb-1.5">
-                    Roberta Muller
+
+
+        <div class="absolute inset-0 z-10 flex flex-col justify-end md:justify-center pb-12 md:pb-0">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 w-full md:mt-[25px]">
+            <div class="max-w-3xl flex flex-col items-start">
+                <h1 class="text-[48px] md:text-6xl lg:text-7xl font-medium text-stone-900 leading-[1.15] tracking-tight mb-1 md:mb-1.5">
+                    Roberta<br class="md:hidden"> Muller
                 </h1>
-                <p class="text-lg md:text-xl font-light text-stone-700 max-w-lg leading-relaxed mb-1.5">
-                    Psicóloga | Adolescentes e Adultos
+                <p class="text-base md:text-xl font-light text-stone-700 max-w-lg leading-relaxed mb-1.5 md:mb-2">
+                    Psicóloga | Adultos e<br class="md:hidden"> Adolescentes
                 </p>
-                <div
-                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-stone-500 shadow-sm mb-1.5">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-stone-500 shadow-sm mb-2.5 md:mb-3.5">
                     <span class="w-2 h-2 rounded-full bg-[#1D3619]"></span>
-                    Psicologia baseada em evidência
+                    Psicologia baseada em evidências
                 </div>
-                <div class="flex items-center gap-4 mt-2">
+                <div class="flex items-center gap-1.5 md:gap-2">
+
                     <a class="inline-flex items-center justify-center px-8 py-4 bg-[#1D3619] text-white text-sm font-semibold rounded-full hover:bg-[#2D4A29] transition-all shadow-xl"
                         href="https://wa.me/5199929743" target="_blank" rel="noopener noreferrer">
                         Agende uma sessão
@@ -107,6 +114,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </header>
     <section class="py-20 bg-white" id="sobre-mi">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
@@ -114,8 +122,7 @@
                 class="bg-[#F0F4F0] rounded-[3rem] p-8 md:p-16 text-center border border-stone-200 shadow-sm opacity-100">
                 <div class="max-w-3xl mx-auto space-y-6">
                     <span class="uppercase tracking-widest text-xs font-bold text-stone-400">Sobre Roberta Muller</span>
-                    <h2 class="text-3xl md:text-4xl font-medium text-stone-900 tracking-tight">Mais que terapia, um
-                        caminho para o seu autodescoberta.</h2>
+                    <h2 class="text-3xl md:text-4xl font-medium text-stone-900 tracking-tight">Mais que terapia, um caminho para o seu autoconhecimento.</h2>
                     <p class="text-stone-500 font-light leading-relaxed text-lg">
                         Sou psicóloga formada pela Universidade do Sul de Santa Catarina e pós-graduanda em Psicoterapia Baseada em Evidências: Terapias Cognitivo-Comportamentais. Possuo formação em Psicopatologia e Terapia Cognitivo-Comportamental, além de cursos na área de Análise do Comportamento, Terapia de Aceitação e Compromisso e Terapia do Esquema.
                     </p>
@@ -152,11 +159,9 @@
                     class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#2D4A29] mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500">
                     <span class="material-symbols-outlined text-3xl">favorite_border</span>
                 </div>
-                <h3 class="text-2xl font-serif font-medium text-stone-900 mb-4">Autoconhecimento e desenvolvimento pessoal</h3>
+                <h3 class="text-xl font-serif font-medium text-stone-900 mb-4">Autoconhecimento e desenvolvimento pessoal</h3>
                 <p class="text-sm text-stone-600 leading-relaxed mb-8 text-center">A terapia também é um caminho para quem deseja se conhecer melhor, entender suas emoções, comportamentos e escolhas. Nesse processo, buscaremos desenvolver habilidades emocionais e construir uma vida mais alinhada com seus valores e objetivos.</p>
-                <div class="mt-auto">
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#2D4A29] opacity-60">Processo Contínuo</span>
-                </div>
+
             </div>
             <div class="bento-card bg-white border border-stone-100 p-10 rounded-[2.5rem] group flex flex-col items-center text-center">
                 <div class="w-14 h-14 bg-[#F0F4F0] rounded-2xl flex items-center justify-center text-[#2D4A29] mb-8">
@@ -265,7 +270,7 @@
         <div class="bg-[#F0F4F0] rounded-[3rem] p-12 md:p-16 text-center border border-[#1D3619]/20 relative overflow-hidden"
             id="contacto">
             <div class="relative z-10">
-                <h3 class="text-3xl md:text-4xl font-serif text-stone-900 mb-6">Pronta para dar o primeiro passo?</h3>
+                <h3 class="text-3xl md:text-4xl font-serif text-stone-900 mb-6">Pronto para dar o primeiro passo?</h3>
                 <p class="text-stone-600 font-light mb-10 max-w-lg mx-auto text-lg">Estou aqui para te acompanhar no seu
                     processo. Agende sua primeira sessão e vamos começar a trabalhar no seu bem-estar.</p>
                 <a class="inline-flex items-center justify-center px-10 py-4 bg-[#1D3619] text-white text-sm font-semibold rounded-full hover:bg-[#2D4A29] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 gap-3"
